@@ -52,33 +52,11 @@ public class TarefaCalculadora implements Runnable {
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("=== Iniciando as Threads ===");
-
-        
+            
         Thread t1 = new Thread(new TarefaCalculadora(10, 5, '+'));
         
-        
-        Thread t2 = new Thread(new TarefaAdivinhacao());
-        
-        
-        Thread t3 = new Thread(new TarefaContador("Desenvolvimento em Java"));
-        
-        
-        int[] v1 = {1, 2, 3};
-        int[] v2 = {4, 5, 6};
-        Thread t4 = new Thread(new TarefaSomaVetor(v1, v2));
-        
-        
-        int[][] m1 = {{1, 2}, {3, 4}};
-        int[][] m2 = {{5, 6}, {7, 8}};
-        Thread t5 = new Thread(new TarefaSomaMatriz(m1, m2));
-
-        
         t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
-        t5.start();
+    
     }
 }
 
